@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiji</title>
+    <style>
+        body {
+            font-family: verdana;
+            text-align: center;
+        }
+        .image-container img {
+            display: block;
+            margin: 20px auto;
+            width: 80%; /* Adjust width for full-size images */
+            max-width: 800px; /* Prevents images from being too large */
+        }
+    </style>
+</head>
+<body>
+    <h1>Fiji</h1>
+    <a href="../index.html">← Back to Home</a>
+
+    <div class="image-container" id="imageContainer"></div>
+    
+    <script>
+        // Number of images you have
+        const totalImages = 11; // Change this to match your actual number
+        const container = document.getElementById("imageContainer");
+    
+        for (let i = 1; i <= totalImages; i++) {
+            const img = document.createElement("img");
+            img.src = `../assets/images/fiji/fiji${i}.jpg`;
+            img.alt = `Fiji - Image ${i}`;
+            img.loading = "lazy"; // Lazy loading for performance
+            img.onerror = function() {
+                console.warn(`Image not found: ${img.src}`);
+            };
+            container.appendChild(img);
+        }
+    </script>
+</body>
+</html>
