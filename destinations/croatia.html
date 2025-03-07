@@ -19,18 +19,21 @@
 </head>
 <body>
     <h1>Croatia</h1>
-    <a href="../index.html">← Back to Home</a>
+    <a href="https://frankxyx.github.io/travel_blog/index.html">← Back to Home</a>
 
     <div class="image-container" id="imageContainer"></div>
     
     <script>
+
+        const baseURL = "https://frankxyx.github.io/travel_blog/assets/images/croatia/";
+
         // Number of images you have
         const totalImages = 8; // Change this to match your actual number
         const container = document.getElementById("imageContainer");
     
         for (let i = 1; i <= totalImages; i++) {
             const img = document.createElement("img");
-            img.src = `../assets/images/croatia/croatia${i}.jpg`;
+            img.src = `${baseURL}croatia${i}.jpg`;
             img.alt = `Croatia - Image ${i}`;
             img.loading = "lazy"; // Lazy loading for performance
             img.onerror = function() {
