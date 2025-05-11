@@ -12,19 +12,66 @@
         .image-container img {
             display: block;
             margin: 20px auto;
-            width: 80%; /* Adjust width for full-size images */
-            max-width: 800px; /* Prevents images from being too large */
+            width: 80%;
+            max-width: 800px;
+        }
+
+        #map {
+            width: 80%;
+            height: 500px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
         }
     </style>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
+
 <body>
     <h1>Norway</h1>
     <a href="../index.html">← Back to Home</a>
+    <h3>click on cities in the map for more information!</h3>
 
+    <!-- Map container -->
+    <div id="map" style="height: 500px; width: 80%;"></div>
+
+    <!-- Image container -->
     <div class="image-container" id="imageContainer"></div>
     
     <script>
-        // Number of images you have
+        // Initialize the map
+        var map = L.map('map').setView([69.65, 18.96], 5); // Centering map
+
+        // Add tile layer first
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors',
+            maxZoom: 18
+        }).addTo(map);
+
+        // Define the city with a proper object
+        var tromso = {
+            name: "Tromsø",
+            coords: [69.65, 18.96],
+            url: "/destinations/cities/tromso.html"
+        };
+
+        // Highlight Tromsø with a marker
+        var marker = L.marker(tromso.coords).addTo(map);
+
+        marker.bindPopup(
+                `<b>${tromso.name}</b><br><a href="${tromso.url}" style="color:blue; text-decoration:underline;" target="_blank">Read more</a>`
+        );
+
+        // add click event to redirect user when marker is clicked
+        marker.on('click', function () {
+            window.location.href = tromso.url;
+        });
+
+        // Load images
         const totalImages = 6; // Change this to match your actual number
         const container = document.getElementById("imageContainer");
     

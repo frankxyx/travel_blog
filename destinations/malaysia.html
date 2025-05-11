@@ -12,19 +12,77 @@
         .image-container img {
             display: block;
             margin: 20px auto;
-            width: 80%; /* Adjust width for full-size images */
-            max-width: 800px; /* Prevents images from being too large */
+            width: 80%; 
+            max-width: 800px;
+        }
+
+        #map {
+            width: 80%;
+            height: 500px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
         }
     </style>
+
+    <!-- Leaflet CSS -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
+
 <body>
     <h1>Malaysia</h1>
     <a href="../index.html">← Back to Home</a>
+    <h3>click on cities in the map for more information!</h3>
 
+    <!-- Map container -->
+    <div id="map" style="height: 500px; width: 80%;"></div>
+
+    <!-- Image container -->
     <div class="image-container" id="imageContainer"></div>
     
     <script>
-        // Number of images you have
+        // Initialize the map
+        var map = L.map('map').setView([4.2, 101.97], 6); // Centering map
+
+        // Add tile layer first
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors',
+            maxZoom: 18
+        }).addTo(map);
+
+        // Define the itinerary route (Kuala Lumpur → Penang)
+        var itineraryCoordinates = [
+            [3.14, 101.69], // Kuala Lumpur
+            [5.41, 100.34]  // Penang
+        ];
+
+        // Add the red dashed itinerary line
+        L.polyline(itineraryCoordinates, {
+            color: 'red',
+            weight: 4,
+            opacity: 0.7,
+            dashArray: '10, 10'
+        }).addTo(map);
+
+        var cities = [
+            {name: "Kuala Lumpur", coords: [3.14, 101.69], url: "/destinations/cities/kl.html"},
+            {name: "Penang", coords: [5.41, 100.34], url: "/destinations/cities/penang.html"}
+        ];
+
+        cities.forEach(city => {
+            var marker = L.marker(city.coords, { title: city.name }).addTo(map);
+
+            marker.bindPopup(`<a href="${city.url}">${city.name}</a>`);
+
+            // add click event to redirect user when marker is clicked
+            marker.on('click', function () {
+                window.location.href = city.url;
+            });
+        });
+
+        // Load images
         const totalImages = 7; // Change this to match your actual number
         const container = document.getElementById("imageContainer");
     

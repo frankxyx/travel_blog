@@ -12,30 +12,91 @@
         .image-container img {
             display: block;
             margin: 20px auto;
-            width: 80%; /* Adjust width for full-size images */
-            max-width: 800px; /* Prevents images from being too large */
+            width: 80%;
+            max-width: 800px;
+        }
+
+        /* Adjust map width to 80% and center it*/
+        #map {
+            width: 80%;
+            height: 500px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
         }
     </style>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
+
 <body>
     <h1>Croatia</h1>
-    <a href="https://frankxyx.github.io/travel_blog/index.html">← Back to Home</a>
+    <a href="../index.html">← Back to Home</a>
+    <h3>click on cities in the map for more information!</h3>
 
+    <!-- Map container -->
+    <div id="map" style="height: 500px; width: 80%;"></div>
+
+    <!-- Image container -->
     <div class="image-container" id="imageContainer"></div>
-    
+
     <script>
 
-        const baseURL = "https://frankxyx.github.io/travel_blog/assets/images/croatia/";
+        // Initialize the map
+        var map = L.map('map').setView([43.5, 15.2], 7); // Centering map
 
-        // Number of images you have
-        const totalImages = 8; // Change this to match your actual number
+        // Add tile layer first
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors',
+            maxZoom: 18
+        }).addTo(map);
+
+        // Define the itinerary route (Split → Makarska → Dubrovnik)
+        var itineraryCoordinates = [
+            [43.51, 16.44], // Split
+            [43.29, 17.02], // Makarska
+            [42.65, 18.09]  // Dubrovnik
+        ];
+
+        // Add the red dashed itinerary line
+        L.polyline(itineraryCoordinates, {
+            color: "red",
+            weight: 4,
+            opacity: 0.7,
+            dashArray: "10, 10"
+        }).addTo(map);
+
+        var cities = [
+            { name: "Split", coords: [43.51, 16.44], url: "/destinations/cities/split.html" },
+            { name: "Makarska", coords: [43.29, 17.02], url: "/destinations/cities/makarska.html" },
+            { name: "Dubrovnik", coords: [42.65, 18.09], url: "/destinations/cities/dubrovnik.html" }
+        ];
+
+        cities.forEach(city => {
+            var marker = L.marker(city.coords, { title: city.name }).addTo(map);
+                
+            marker.bindPopup(
+                `<b>${city.name}</b><br><a href="${city.url}" style="color:blue; text-decoration:underline;" target="_blank">Read more</a>`
+            );
+
+            // add click event to redirect user when marker is clicked
+            marker.on('click', function () {
+                window.location.href = city.url;
+            });
+        });
+
+        // Load Images
+        const totalImages = 8;
         const container = document.getElementById("imageContainer");
-    
+
         for (let i = 1; i <= totalImages; i++) {
             const img = document.createElement("img");
-            img.src = `${baseURL}croatia${i}.jpg`;
+            img.src = `../assets/images/croatia/croatia${i}.jpg`;
             img.alt = `Croatia - Image ${i}`;
-            img.loading = "lazy"; // Lazy loading for performance
+            img.loading = "lazy";
             img.onerror = function() {
                 console.warn(`Image not found: ${img.src}`);
             };
@@ -44,3 +105,5 @@
     </script>
 </body>
 </html>
+
+
