@@ -55,39 +55,112 @@
         a:hover {
             text-decoration: underline;
         }
+
+        #map {
+            width: 80%;
+            height: 600px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+        } 
     </style>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
     <nav>
-        <a href="#about">About</a>
-        <a href="#travel">Travel</a>
-        <a href="#contact">Contact</a>
+        <a href="#travel">About</a>
+        <a href="#project">Travel</a>
+        <a href="#extracirricular">Contact</a>
     </nav>
     
     <main>
         <h1>Frank Mayfield</h1>
         <h3>(Yuxuan Xiang)</h3>
         
-        <h2 id="about"></h2>
-        <h2>About Me</h2>
-        <p>I'm Frank, an avid traveler exploring the world. This blog is a space where I share my adventures, experiences, and favorite destinations.</p>
-        <p>I'm a 2nd Year undergraduate student studying Data Science
-            at <a href="https://www.bristol.ac.uk/">University of Bristol</a> (2023-2026).</p>
-        <p>In the summer of 2023, I participated in a community development project focused on youth empowerment and improving education infrastructure in Fiji by <a href="https://thinkpacific.com">Think Pacific</a>.</p>
-        
-        <h2 id="travel">Travel</h2>
+        <h2 id="travel">Travels</h2>
+        <p>Click on the map below to find out the details of my adventures.</p>
+
+        <!-- Interactive map inserted here -->
+        <!-- Map container -->
+        <div id="map" style="height: 500px; width: 80%;"></div>
+
+        <!-- Image container -->
+        <div class="image-container" id="imageContainer"></div>
+
+        <script>
+        // 1. Initialize world‐view map
+        var map = L.map('map').setView([20, 0], 2);
+
+        // 2. Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 18
+        }).addTo(map);
+
+        // 3. Define your five locations
+        var locations = [
+        {
+            name: 'Fiji',
+            coords: [-17.7134, 178.0650],
+            url: 'destinations/fiji.html'
+        },
+        {
+            name: 'Croatia',
+            coords: [45.8150, 15.9819],
+            url: 'destinations/croatia.html'
+        },
+        {
+            name: 'Malaysia',
+            coords: [3.1390, 101.6869],
+            url: 'destinations/malaysia.html'
+        },
+        {
+            name: 'Tromsø, Norway',
+            coords: [69.6492, 18.9553],
+            url: 'destinations/norway_tromso.html'
+        },
+        {
+            name: 'Ehrwald, Austria',
+            coords: [47.4673, 10.9844],
+            url: 'destinations/ehrwald.html'
+        }
+        ];
+
+        // 4. Loop through and place markers + popups
+        locations.forEach(function(loc) {
+        var marker = L.marker(loc.coords).addTo(map);
+        marker.bindPopup(
+            '<strong>' + loc.name + '</strong><br>' +
+            '<a href="' + loc.url + '">Learn more</a>'
+        );
+        marker.on('click', function() {
+            window.location.href = loc.url;
+        });
+        });
+        </script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
         <ul>
             <li><a href="destinations/fiji.html">Fiji</a></li>
             <li><a href="destinations/croatia.html">Croatia</a></li>
             <li><a href="destinations/malaysia.html">Malaysia</a></li>
             <li><a href="destinations/norway_tromso.html">Norway-Tromso</a></li>
         </ul>
+
+        <h2 id="projects">Projects</h2>
+        <p>I study Data Science
+            at <a href="https://www.bristol.ac.uk/">University of Bristol</a> (2023-2026). I have prior experience developing software using C++ 
+            and it remains my favorite programming language due to its efficiency and high performance.</p>
+        <p>More projects can be find on <a href="https://github.com/frankxyx">Frank's Github</a>.</p>
         
         <h2 id="contact">Contact</h2>
         <ul>
             <p>Email me: <a href="mailto:frankxyx@icloud.com">frankxyx@icloud.com</a></p>
             <li><a href="https://www.linkedin.com/in/frank-mayfield/">Frank's LinkedIn</a></li>
-            <li><a href="https://github.com/frankxyx">Frank's Github</a></li>
         </ul>
 
         <img class="profile-image" src="portrait_byweiwen.jpg" alt="Frank Mayfield Profile Picture">
