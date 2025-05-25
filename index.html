@@ -59,7 +59,7 @@
         #map {
             width: 80%;
             height: 600px;
-            margin: 20px auto;
+            margin: 10px auto;
             display: block;
             border-radius: 10px;
         } 
@@ -72,9 +72,9 @@
 </head>
 <body>
     <nav>
-        <a href="#travel">About</a>
-        <a href="#project">Travel</a>
-        <a href="#extracirricular">Contact</a>
+        <a href="#travels">Travels</a>
+        <a href="#projects">projects</a>
+        <a href="#extracirricular">extracirricular</a>
     </nav>
     
     <main>
@@ -82,9 +82,8 @@
         <h3>(Yuxuan Xiang)</h3>
         
         <h2 id="travel">Travels</h2>
-        <p>Click on the map below to find out the details of my adventures.</p>
+        <p>Click on the locations below to find out the details of my adventures.</p>
 
-        <!-- Interactive map inserted here -->
         <!-- Map container -->
         <div id="map" style="height: 500px; width: 80%;"></div>
 
@@ -93,7 +92,7 @@
 
         <script>
         // 1. Initialize world‐view map
-        var map = L.map('map').setView([20, 0], 2);
+        var map = L.map('map').setView([20, 0], 1.5);
 
         // 2. Add OpenStreetMap tiles
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -126,7 +125,7 @@
         {
             name: 'Ehrwald, Austria',
             coords: [47.4673, 10.9844],
-            url: 'destinations/ehrwald.html'
+            url: 'destinations/austria_ehrwald.html'
         }
         ];
 
@@ -144,24 +143,14 @@
         </script>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-        <ul>
-            <li><a href="destinations/fiji.html">Fiji</a></li>
-            <li><a href="destinations/croatia.html">Croatia</a></li>
-            <li><a href="destinations/malaysia.html">Malaysia</a></li>
-            <li><a href="destinations/norway_tromso.html">Norway-Tromso</a></li>
-        </ul>
-
         <h2 id="projects">Projects</h2>
-        <p>I study Data Science
-            at <a href="https://www.bristol.ac.uk/">University of Bristol</a> (2023-2026). I have prior experience developing software using C++ 
-            and it remains my favorite programming language due to its efficiency and high performance.</p>
-        <p>More projects can be find on <a href="https://github.com/frankxyx">Frank's Github</a>.</p>
+        <p>I'm a Data Science student
+            at <a href="https://www.bristol.ac.uk/">University of Bristol</a> (2023-2026) and my main programming languages are C++ and Python.</p>
+        <p>More projects can be found on <a href="https://github.com/frankxyx">Frank's Github</a>.</p>
         
-        <h2 id="contact">Contact</h2>
-        <ul>
-            <p>Email me: <a href="mailto:frankxyx@icloud.com">frankxyx@icloud.com</a></p>
-            <li><a href="https://www.linkedin.com/in/frank-mayfield/">Frank's LinkedIn</a></li>
-        </ul>
+        <h2 id="sports">Sports</h2>
+        <p>I'm a sports enthusiast particularly passionate about tennis. I currently serve as the Advanced Team Captain in the University of Bristol Tennis Society</p>
+        <p><a href="./extracirricular/tennis.html">Tennis Content</a></p>
 
         <img class="profile-image" src="portrait_byweiwen.jpg" alt="Frank Mayfield Profile Picture">
     </main>
