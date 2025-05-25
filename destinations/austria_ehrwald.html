@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Germany</title>
+  <style>
+    body {
+      font-family: verdana;
+      text-align: center;
+    }
+    .image-container img {
+      display: block;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 800px;
+    }
+    #map {
+      width: 80%;
+      height: 300px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+    }
+    #trip-intro {
+  width: 80%;
+  margin: 20px auto;
+  text-align: left;
+  line-height: 1.6;
+    }
+
+  </style>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <h1>Munich → Garmisch-Partenkirchen → Ehrwald</h1>
+  <a href="../index.html">← Back to Home</a>
+  
+    <!-- Trip Intro -->
+    <section id="trip-intro">
+        <h2>Spring Hiking with Lucas</h2>
+        <p>
+          My friend Lucas and I embarked on a spring hiking adventure to
+          Ehrwald, Austria this May. We flew from London to Munich, then caught the
+          FlixBus through Garmisch-Partenkirchen before winding our way up to the village
+          at the foot of the towering Zugspitze.
+        </p>
+        <p>
+          Nestled in the Tirol region, Ehrwald is a picture-perfect Alpine village famous
+          for its emerald-green lakes, meadows dotted with wildflowers, and panoramic
+          mountain vistas. It serves as one of the main gateways to the Wetterstein
+          range, home to Austria’s highest peak and offers everything from gentle valley
+          walks to challenging via ferrata routes.
+        </p>
+      </section>
+
+  <!-- Map container -->
+  <div id="map"></div>
+
+  <!-- Image container -->
+  <div class="image-container" id="imageContainer"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map centered over Southern Germany / Austria
+    var map = L.map('map').setView([47.8, 11.3], 8);
+
+    // Tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 18
+    }).addTo(map);
+
+    // Itinerary: Munich → Garmisch-Partenkirchen → Ehrwald
+    var itineraryCoords = [
+      [48.1351, 11.5820], // Munich
+      [47.4918, 11.0950], // Garmisch-Partenkirchen
+      [47.4069, 10.9994]  // Ehrwald
+    ];
+
+    L.polyline(itineraryCoords, {
+      color: 'red',
+      weight: 4,
+      opacity: 0.7,
+      dashArray: '10, 10'
+    }).addTo(map);
+
+    // Place markers
+    var stops = [
+      {
+        name: 'Munich',
+        coords: [48.1351, 11.5820],
+        url: '/destinations/cities/munich.html'
+      },
+      {
+        name: 'Garmisch-Partenkirchen',
+        coords: [47.4918, 11.0950],
+        url: '/destinations/cities/garmisch-partenkirchen.html'
+      },
+      {
+        name: 'Ehrwald',
+        coords: [47.4069, 10.9994],
+        url: '/destinations/cities/ehrwald.html'
+      }
+    ];
+
+    stops.forEach(function(stop) {
+      var marker = L.marker(stop.coords, { title: stop.name }).addTo(map);
+      marker.bindPopup(
+        '<b>' + stop.name + '</b><br>' +
+        '<a href="' + stop.url + '" style="color:blue; text-decoration:underline;" target="_blank">Read more</a>'
+      );
+      marker.on('click', function() {
+        window.location.href = stop.url;
+      });
+    });
+
+    // Load Images
+    const totalImages = 4;
+    const container = document.getElementById('imageContainer');
+    for (let i = 1; i <= totalImages; i++) {
+      const img = document.createElement('img');
+      img.src = `../assets/images/austria/austria${i}.jpg`;
+      img.alt = `Austria – Image ${i}`;
+      img.loading = 'lazy';
+      img.onerror = function() {
+        console.warn(`Image not found: ${img.src}`);
+      };
+      container.appendChild(img);
+    }
+  </script>
+</body>
+</html>
