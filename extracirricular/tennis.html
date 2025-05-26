@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tennis Content</title>
+  <style>
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+    main {
+      max-width: 90%;
+      width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+      color: #0073e6;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    section {
+      margin-top: 30px;
+      text-align: left;
+    }
+    section h2 {
+      font-size: 1.4rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    section p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .image-container img {
+      width: calc(50% - 15px);
+      max-width: 350px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>My Tennis Adventures</h1>
+    <nav>
+      <a href="../index.html">← Home</a>
+      <a href="#play-pictures">Playing Tennis</a>
+      <a href="#wimbledon-visit">Wimbledon 2024</a>
+    </nav>
+
+    <!-- Section 1: Playing Tennis -->
+    <section id="play-pictures">
+      <h2>Playing Tennis</h2>
+      <p>Here are some snapshots from when I hit the court with friends.</p>
+      <div class="image-container" id="playImages"></div>
+    </section>
+
+    <!-- Section 2: Wimbledon 2024 -->
+    <section id="wimbledon-visit">
+      <h2>Wimbledon 2024</h2>
+      <p>Visiting Wimbledon in 2024 was a dream come true. Watching one of my favorite players Rybakina playing ladies' semi final in the center court
+        and soaking up the unique atmosphere of the All England Club made for an unforgettable experience.</p>
+      <div class="image-container" id="wimbledonImages"></div>
+    </section>
+  </main>
+
+  <script>
+    // Load playing tennis images
+    const totalPlayImages = 6; // adjust as needed
+    const playContainer = document.getElementById('playImages');
+    for (let i = 1; i <= totalPlayImages; i++) {
+      const img = document.createElement('img');
+      img.src = `../assets/images/tennis/tennis${i}.jpg`;
+      img.alt = `Playing Tennis ${i}`;
+      img.loading = 'lazy';
+      playContainer.appendChild(img);
+    }
+
+    // Load Wimbledon images
+    const totalWimbledonImages = 4; // adjust as needed
+    const wimbledonContainer = document.getElementById('wimbledonImages');
+    for (let i = 1; i <= totalWimbledonImages; i++) {
+      const img = document.createElement('img');
+      img.src = `../assets/images/wimbledon/wimbledon${i}.jpg`;
+      img.alt = `Wimbledon 2024 ${i}`;
+      img.loading = 'lazy';
+      wimbledonContainer.appendChild(img);
+    }
+  </script>
+</body>
+</html>
