@@ -18,10 +18,17 @@
 
         #map {
             width: 80%;
-            height: 300px;
+            height: 400px;
             margin: 20px auto;
             display: block;
             border-radius: 10px;
+        }
+
+        #trip-intro {
+            width: 80%;
+            margin: 20px auto;
+            text-align: left;
+            line-height: 1.6;
         }
     </style>
 
@@ -32,12 +39,24 @@
 </head>
 
 <body>
-    <h1>Norway</h1>
+    <h1>Tromsø</h1>
     <a href="../index.html">← Back to Home</a>
-    <h3>click on cities in the map for more information!</h3>
+
+        <!-- Trip Intro -->
+        <section id="trip-intro">
+            <h2>Northern Light Hunting in Tromsø</h2>
+            <p>
+              At Christmas 2023, I traveled to Tromsø for my first ever northern light hunt.
+              Stepping into the Arctic Circle for the very first time, the snow blanketed landscapes and crisp, frosty air did not disappoint. 
+            </p>
+            <p>
+              Over five days, I chased the aurora each night, but low solar activity kept the sky clear of dancing lights.
+              Still, reindeer sledding in a traditional Sámi village and watching orcas glide through the icy Arctic Ocean were experiences I’ll never forget.
+            </p>
+          </section>
 
     <!-- Map container -->
-    <div id="map" style="height: 500px; width: 80%;"></div>
+    <div id="map"></div>
 
     <!-- Image container -->
     <div class="image-container" id="imageContainer"></div>

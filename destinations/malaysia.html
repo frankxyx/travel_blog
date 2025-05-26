@@ -18,10 +18,17 @@
 
         #map {
             width: 80%;
-            height: 300px;
+            height: 400px;
             margin: 20px auto;
             display: block;
             border-radius: 10px;
+        }
+
+        #trip-intro {
+            width: 80%;
+            margin: 20px auto;
+            text-align: left;
+            line-height: 1.6;
         }
     </style>
 
@@ -32,12 +39,27 @@
 </head>
 
 <body>
-    <h1>Malaysia</h1>
+    <h1>Kuala Lumpur → Penang</h1>
     <a href="../index.html">← Back to Home</a>
-    <h3>click on cities in the map for more information!</h3>
+
+    <!-- Trip Intro -->
+    <section id="trip-intro">
+        <h2>Road Trip with Ying</h2>
+        <p>
+          At the Christmas of 2024 I made a stop at Malaysia on my way back to China and went on a week-long road trip with my friend Ying.
+          A Kuala Lumper local, Ying picked me up from the airport and together we drove north from KL to Penang.
+        </p>
+        <p>
+          Malaysia cuisine was an absoulute highlight.
+          From fiery laksa to silky pandan desserts, classic Chinese dishes are given new life by fragrant local herbs and spices.
+          In Penang, the island's architecture told its own story.
+          Stately British colonial mansions, colorful Chinese shophouses draped in bougainvillea, and graceful Malay mosques all stand side by side,
+          a beautiful testament to the city's muticultral heritage.
+        </p>
+    </section>
 
     <!-- Map container -->
-    <div id="map" style="height: 500px; width: 80%;"></div>
+    <div id="map"></div>
 
     <!-- Image container -->
     <div class="image-container" id="imageContainer"></div>
