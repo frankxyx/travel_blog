@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edinburgh</title>
+  <style>
+    body {
+      font-family: verdana;
+      text-align: center;
+    }
+    .image-container img {
+      display: block;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 800px;
+    }
+    #map {
+      width: 80%;
+      height: 400px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+    }
+    #trip-intro {
+      width: 80%;
+      margin: 20px auto;
+      text-align: left;
+      line-height: 1.6;
+    }
+  </style>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <h1>Edinburgh</h1>
+  <a href="../index.html">← Back to Home</a>
+
+  <!-- Trip Intro -->
+  <section id="trip-intro">
+    <h2>Summer Stroll with Tauch</h2>
+    <p>
+      In August 2024, my friend Tauch and I spent a long weekend exploring the historic streets of Edinburgh.
+      We wandered through the cobbled lanes of the Old Town, sampled haggis at a local pub, and soaked up the city’s vibrant festival atmosphere.
+    </p>
+    <p>
+      The highlight, however, was our climb to the summit of Arthur’s Seat.
+      This ancient volcanic crag, rising above Holyrood Park, rewarded us with panoramic views
+      over the castle, the Firth of Forth, and the rolling Lothian countryside beyond.
+    </p>
+  </section>
+
+  <!-- Map container -->
+  <div id="map"></div>
+
+  <!-- Image container -->
+  <div class="image-container" id="imageContainer"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map centered on Edinburgh
+    var map = L.map('map').setView([55.9533, -3.1883], 11);
+
+    // Tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 18
+    }).addTo(map);
+
+    // Itinerary line: Edinburgh → Arthur's Seat
+    var route = [
+      [55.9533, -3.1883], // Edinburgh city centre
+      [55.9444, -3.1616]  // Arthur's Seat summit
+    ];
+    L.polyline(route, {
+      color: 'red',
+      weight: 4,
+      opacity: 0.7,
+      dashArray: '10, 10'
+    }).addTo(map);
+
+    // Markers
+    var stops = [
+      {
+        name: 'Edinburgh',
+        coords: [55.9533, -3.1883],
+        url: '/destinations/cities/edinburgh.html'
+      },
+      {
+        name: 'Arthur’s Seat',
+        coords: [55.9444, -3.1616],
+        url: '/destinations/cities/arthurs_seat.html'
+      }
+    ];
+    stops.forEach(function(stop) {
+      var marker = L.marker(stop.coords).addTo(map);
+      marker.bindPopup(
+        `<b>${stop.name}</b><br>` +
+        `<a href="${stop.url}" style="color:blue; text-decoration:underline;" target="_blank">Read more</a>`
+      );
+      marker.on('click', function() {
+        window.location.href = stop.url;
+      });
+    });
+
+    // Load images
+    const totalImages = 6;  // adjust to your actual count
+    const container = document.getElementById('imageContainer');
+    for (let i = 1; i <= totalImages; i++) {
+      const img = document.createElement('img');
+      img.src = `../assets/images/edinburgh/edinburgh${i}.jpg`;
+      img.alt = `Edinburgh – Image ${i}`;
+      img.loading = 'lazy';
+      img.onerror = () => console.warn(`Image not found: ${img.src}`);
+      container.appendChild(img);
+    }
+  </script>
+</body>
+</html>
