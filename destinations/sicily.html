@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sicily</title>
+  <style>
+    body {
+      font-family: verdana;
+      text-align: center;
+    }
+    .image-container img {
+      display: block;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 800px;
+    }
+    #map {
+      width: 80%;
+      height: 400px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+    }
+    #trip-intro {
+      width: 80%;
+      margin: 20px auto;
+      text-align: left;
+      line-height: 1.6;
+    }
+  </style>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <h1>Alcamo → Palermo</h1>
+  <a href="../index.html">← Back to Home</a>
+
+  <!-- Trip Intro -->
+  <section id="trip-intro">
+    <h2>Sicilian Easter Getaway</h2>
+    <p>
+      In early spring 2025, I explored western Sicily with a 9 day trip from the hilltop town of Alcamo down to the bustling capital of Palermo.
+      After touching down at Palermo Airport, I rented a compact car and headed inland through almond orchards and olive groves to Alcamo’s medieval center.
+    </p>
+    <p>
+      Alcamo charmed me with its centuries old churches and panoramic views over
+      the Gulf of Castellammare. After 4 days in Alcamo, I retraced the winding roads
+      back toward the coast and spent the afternoon soaking up Palermo’s vibrant
+      markets, baroque piazzas, and sumptuous Sicilian street food.
+    </p>
+  </section>
+
+  <!-- Map container -->
+  <div id="map"></div>
+
+  <!-- Image container -->
+  <div class="image-container" id="imageContainer"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map centered on western Sicily
+    var map = L.map('map').setView([38.10, 13.10], 10);
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 18
+    }).addTo(map);
+
+    // Itinerary: Alcamo → Palermo
+    var itineraryCoordinates = [
+      [38.0833, 12.8496], // Alcamo
+      [38.1157, 13.3615]  // Palermo
+    ];
+
+    // Red dashed line
+    L.polyline(itineraryCoordinates, {
+      color: 'red',
+      weight: 4,
+      opacity: 0.7,
+      dashArray: '10, 10'
+    }).addTo(map);
+
+    // Markers
+    var cities = [
+      {
+        name: 'Alcamo',
+        coords: [38.0833, 12.8496],
+        url: '/destinations/cities/alcamo.html'
+      },
+      {
+        name: 'Palermo',
+        coords: [38.1157, 13.3615],
+        url: '/destinations/cities/palermo.html'
+      }
+    ];
+
+    cities.forEach(city => {
+      var marker = L.marker(city.coords, { title: city.name }).addTo(map);
+      marker.bindPopup(
+        `<b>${city.name}</b><br>` +
+        `<a href="${city.url}" style="color:blue; text-decoration:underline;" target="_blank">Read more</a>`
+      );
+      marker.on('click', () => {
+        window.location.href = city.url;
+      });
+    });
+
+    // Load Images
+    const totalImages = 7; // adjust to your actual number
+    const container = document.getElementById('imageContainer');
+
+    for (let i = 1; i <= totalImages; i++) {
+      const img = document.createElement('img');
+      img.src = `../assets/images/sicily/sicily${i}.jpg`;
+      img.alt = `Sicily – Image ${i}`;
+      img.loading = 'lazy';
+      img.onerror = () => {
+        console.warn(`Image not found: ${img.src}`);
+      };
+      container.appendChild(img);
+    }
+  </script>
+</body>
+</html>
