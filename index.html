@@ -95,10 +95,15 @@
         var map = L.map('map').setView([20, 0], 1.5);
 
         // 2. Add OpenStreetMap tiles
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors',
-        maxZoom: 18
-        }).addTo(map);
+        L.tileLayer('https://tile.jawg.io/jawg-terrain/{z}/{x}/{y}{r}.png?access-token=W1YwtxFx5TCcI6yQS3bcPBwRjEIMIgSLZyBc7K8qcsfsv9Xv2O4o4ffG914F63tL', 
+        {
+            attribution: 
+              'Tiles courtesy of <a href="https://www.jawg.io/" target="_blank">Jawg</a> ' +
+              '– &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            minZoom: 0, 
+            maxZoom: 18
+        }
+    ).addTo(map);
 
         // 3. Define your five locations
         var locations = [
