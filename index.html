@@ -7,39 +7,48 @@
     <title>Frank - Travel Blog</title>
     <style>
         body {
-            font-family: Verdana, sans-serif;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
-            background-color: #f9f9f9;
-        }
-        main {
-            max-width: 90%;
-            width: 700px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(to right, #f3f4f7, #ebeff5);
+            color: #333;
         }
         nav {
             background: #0073e6;
-            padding: 10px;
-            margin-bottom: 20px;
+            padding: 15px 10px;
+            margin-bottom: 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
         }
         nav a {
-            color: white;
+            color: #fff;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
+            font-size: 17px;
+            font-weight: 600;
         }
         nav a:hover {
             text-decoration: underline;
         }
+        header.hero {
+            background: #fff;
+            padding: 40px 20px 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
         .profile-image {
             width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        main {
+            max-width: 90%;
+            width: 750px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
             border-radius: 10px;
-            margin-top: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         ul {
             list-style-type: none;
@@ -58,11 +67,11 @@
 
         #map {
             width: 80%;
-            height: 600px;
-            margin: 10px auto;
+            height: 500px;
+            margin: 20px auto;
             display: block;
             border-radius: 10px;
-        } 
+        }
     </style>
 
     <!-- Leaflet CSS -->
@@ -76,10 +85,14 @@
         <a href="#projects">Projects</a>
         <a href="#sports">Sports</a>
     </nav>
-    
-    <main>
+
+    <header class="hero">
+        <img class="profile-image" src="portrait_byweiwen.jpg" alt="Frank Mayfield Profile Picture">
         <h1>Frank Mayfield</h1>
-        <h3>(Yuxuan Xiang)</h3>
+        <p class="tagline">(Yuxuan Xiang)</p>
+    </header>
+
+    <main>
         
         <h2 id="travels">Travels</h2>
         <p>Click on the locations below to find out the details of my adventures.</p>
@@ -160,7 +173,6 @@
         });
         });
         </script>
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
         <h2 id="projects">Projects</h2>
         <p>I'm a Data Science student
@@ -171,7 +183,6 @@
         <p>I'm a sports enthusiast particularly passionate about tennis. I currently serve as the Advanced Team Captain in the University of Bristol Tennis Club</p>
         <p><a href="./extracirricular/tennis.html">Tennis Content</a></p>
 
-        <img class="profile-image" src="portrait_byweiwen.jpg" alt="Frank Mayfield Profile Picture">
     </main>
 </body>
 </html>
