@@ -5,74 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to Frank's travel blog, featuring adventures in Fiji, Malaysia, and Croatia ...">
     <title>Frank - Travel Blog</title>
-    <style>
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background: linear-gradient(to right, #f3f4f7, #ebeff5);
-            color: #333;
-        }
-        nav {
-            background: #0073e6;
-            padding: 15px 10px;
-            margin-bottom: 0;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 17px;
-            font-weight: 600;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        header.hero {
-            background: #fff;
-            padding: 40px 20px 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .profile-image {
-            width: 200px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-        main {
-            max-width: 90%;
-            width: 750px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 8px 0;
-        }
-        a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        #map {
-            width: 80%;
-            height: 500px;
-            margin: 20px auto;
-            display: block;
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -81,19 +15,19 @@
 </head>
 <body>
     <nav>
+        <a href="#me">About Me</a>
         <a href="#travels">Travels</a>
         <a href="#projects">Projects</a>
         <a href="#sports">Sports</a>
     </nav>
 
-    <header class="hero">
-        <img class="profile-image" src="portrait_byweiwen.jpg" alt="Frank Mayfield Profile Picture">
-        <h1>Frank Mayfield</h1>
-        <p class="tagline">(Yuxuan Xiang)</p>
-    </header>
-
     <main>
-        
+        <h2 id="me">About Me</h2>
+        <img class="profile-image" src="portrait_byweiwen.jpg" alt="Frank Mayfield Profile Picture">
+        <img class="profile-image" src="profileimage.jpg" alt="Frank Mayfield Profile Picture 2">
+        <p>Hi, I'm Frank Mayfield(Yuxuan Xiang), a passionate traveler and adventure seeker.
+           I also study Data Science at the University of Bristol(2023-2026), with my main focus on machine learning and data analysis.</p>
+
         <h2 id="travels">Travels</h2>
         <p>Click on the locations below to find out the details of my adventures.</p>
 
@@ -174,14 +108,29 @@
         });
         </script>
 
-        <h2 id="projects">Projects</h2>
-        <p>I'm a Data Science student
-            at <a href="https://www.bristol.ac.uk/">University of Bristol</a> (2023-2026) and my main programming languages are C++ and Python.</p>
-        <p>More projects can be found on <a href="https://github.com/frankxyx">Frank's Github</a>.</p>
+        <section id="projects">
+            <h2 id="projects">Projects</h2>
+            <div class="project-list">
+            <!-- Project 1 -->
+             <a href="projects/statistical_mechanics.html" class ="project-item">
+                <img src="assets/images/projects/statistical_mechanics.png"
+                     alt="Statistical Mechanics Project"
+                     class="project-image"
+                />
+                <div class="project-title">Ising Model Simulation</div>
+            </a>
         
-        <h2 id="sports">Sports</h2>
-        <p>I'm a sports enthusiast particularly passionate about tennis. I currently serve as the Advanced Team Captain in the University of Bristol Tennis Club</p>
-        <p><a href="./extracirricular/tennis.html">Tennis Content</a></p>
+            <p class="more-projects">
+                More projects can be found on  
+                <a href="https://github.com/frankxyx" target="_blank">Frank’s GitHub</a>.
+            </p>
+        </section>
+        
+        <section id="sports">
+            <h2 id="sports">Sports</h2>
+            <p>I'm a sports enthusiast particularly passionate about tennis. I currently serve as the Advanced Team Captain in the University of Bristol Tennis Club</p>
+            <p><a href="./extracirricular/tennis.html">Tennis Content</a></p>
+        </section>
 
     </main>
 </body>

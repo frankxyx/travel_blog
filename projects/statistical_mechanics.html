@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- head tags, css links, etc. -->
+</head>
+<body>
+  <!-- … your nav/header … -->
+
+  <main>
+    <!-- 1. Slider HTML goes here -->
+    <section id="slides-gallery">
+      <div class="slider">
+        <button id="prevBtn">◀ Prev</button>
+        <div class="slide-frame">
+          <img id="currentSlide" src="../assets/IsingModel/slides1.jpg" alt="slide 1" />
+        </div>
+        <button id="nextBtn">Next ▶</button>
+      </div>
+      <div id="slideCounter">1 / 8</div>
+    </section>
+
+    <!-- … any other content … -->
+  </main>
+
+  <!-- 2. Option A: Inline JS -->
+  <script>
+    (function() {
+      const TOTAL = 8;
+      let current = 1;
+      const imgEl     = document.getElementById('currentSlide');
+      const prevBtn   = document.getElementById('prevBtn');
+      const nextBtn   = document.getElementById('nextBtn');
+      const counterEl = document.getElementById('slideCounter');
+
+      function update() {
+        imgEl.src = `../assets/IsingModel/slides${current}.jpg`;
+        imgEl.alt = `slides ${current}`;
+        counterEl.textContent = `${current} / ${TOTAL}`;
+        prevBtn.disabled = current === 1;
+        nextBtn.disabled = current === TOTAL;
+      }
+
+      prevBtn.addEventListener('click', () => {
+        if (current > 1) current--;
+        update();
+      });
+      nextBtn.addEventListener('click', () => {
+        if (current < TOTAL) current++;
+        update();
+      });
+
+      update();
+    })();
+  </script>
+
+  <!-- 2. Option B: External JS file -->
+  <!-- <script src="js/slides.js"></script> -->
+
+</body>
+</html>
+
+
+
+
