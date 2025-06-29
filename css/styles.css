@@ -130,5 +130,58 @@ a:hover {
   text-decoration: underline;
 }
 
+/* ────────────────────────────────────────────────────────
+   Sports Section
+───────────────────────────────────────────────────────── */
+#sports {
+  max-width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+#sports .sports-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;     /* space between cards and the paragraph */
+}
+
+.sports-item {
+  width: 300px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: inherit;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sports-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.sports-title {
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: auto;        /* push the title (or any extra content) to the bottom */
+}
+
+/* Style the descriptive paragraph below */
+#sports p {
+  font-size: 1rem;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
 
 
