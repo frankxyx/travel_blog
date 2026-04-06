@@ -1,0 +1,924 @@
+[
+  {
+    "id": "fiji",
+    "title": "Volunteering in Fiji with Think Pacific",
+    "country": "Fiji",
+    "route": "Nadi → Suva → Delailasakau",
+    "dates": {
+      "start": "2023-07-01",
+      "end": "2023-07-21"
+    },
+    "tags": [
+      "culture",
+      "outdoor",
+      "local-food"
+    ],
+    "description": "In the summer of 2023, I went to Fiji on a volunteering trip with Think Pacific in a rural Fijian village Delailasakau. I first flew to Nadi which is the country's main international airport and met with my fellow team members. From Nadi we took a coach to Suva, the capital, where we stocked up the supplies and prepared for the journey ahead.\n\nNext we headed deep into the mountains to Delailasakau, a small rural community tucked away in Fiji's interior. The warm hospitality of the villagers and the strong sense of unity within their community left a lasting impression on me.",
+    "stops": [
+      {
+        "name": "Nadi",
+        "coords": [
+          -17.7765,
+          177.4356
+        ],
+        "highlights": [
+          "International airport hub",
+          "Team meetup point"
+        ],
+        "description": "Fiji's gateway city and third-largest urban area, located on the western side of Viti Levu. Home to the international airport and a vibrant market scene.",
+        "activities": [
+          {
+            "name": "Visit Nadi Market",
+            "type": "culture",
+            "duration": "2 hours",
+            "description": "Browse the colourful produce stalls and pick up Fijian spices and kava."
+          },
+          {
+            "name": "Sri Siva Subramaniya Temple",
+            "type": "culture",
+            "duration": "1 hour",
+            "description": "Explore the largest Hindu temple in the Southern Hemisphere, a stunning Dravidian-style landmark."
+          },
+          {
+            "name": "Garden of the Sleeping Giant",
+            "type": "outdoor",
+            "duration": "2 hours",
+            "description": "Wander through a peaceful orchid garden at the foot of the Nausori Highlands."
+          }
+        ],
+        "suggestedDays": 1
+      },
+      {
+        "name": "Suva",
+        "coords": [
+          -18.1248,
+          178.4501
+        ],
+        "highlights": [
+          "Capital city",
+          "Supply preparation"
+        ],
+        "description": "Fiji's lively capital on the southeastern coast of Viti Levu, known for its colonial architecture, vibrant food scene, and the Fiji Museum.",
+        "activities": [
+          {
+            "name": "Fiji Museum",
+            "type": "culture",
+            "duration": "2 hours",
+            "description": "Learn about Fijian history, from ancient Lapita pottery to British colonial artefacts."
+          },
+          {
+            "name": "Suva Municipal Market",
+            "type": "local-food",
+            "duration": "1.5 hours",
+            "description": "One of the largest open-air markets in the South Pacific — try fresh coconuts and tropical fruit."
+          },
+          {
+            "name": "Colo-i-Suva Forest Park",
+            "type": "outdoor",
+            "duration": "3 hours",
+            "description": "A lush rainforest hike with natural swimming pools and waterfalls, just 20 minutes from the city."
+          }
+        ],
+        "suggestedDays": 2
+      },
+      {
+        "name": "Delailasakau",
+        "coords": [
+          -17.7134,
+          178.0650
+        ],
+        "highlights": [
+          "Rural village",
+          "Volunteering",
+          "Community immersion"
+        ],
+        "description": "A small rural community in Fiji's interior highlands, accessible only by unpaved mountain roads. Village life centres around communal farming, kava ceremonies, and family.",
+        "activities": [
+          {
+            "name": "Community volunteering",
+            "type": "culture",
+            "duration": "Full day",
+            "description": "Help build classrooms or water infrastructure alongside villagers."
+          },
+          {
+            "name": "Traditional kava ceremony",
+            "type": "culture",
+            "duration": "Evening",
+            "description": "Join the village circle for a kava welcome ceremony under the stars."
+          },
+          {
+            "name": "Highland trekking",
+            "type": "hiking",
+            "duration": "4 hours",
+            "description": "Hike through the surrounding highlands with village guides to remote waterfalls."
+          },
+          {
+            "name": "Lovo feast",
+            "type": "local-food",
+            "duration": "Evening",
+            "description": "Experience a traditional earth-oven feast cooked underground with hot stones."
+          }
+        ],
+        "suggestedDays": 14
+      }
+    ],
+    "transit": [
+      {
+        "from": "Nadi",
+        "to": "Suva",
+        "mode": "Coach",
+        "duration": "4.5 hours",
+        "details": "Fiji Coach or local bus; scenic coastal drive along Kings Road or Queens Road.",
+        "cost": "~FJ$20–30"
+      },
+      {
+        "from": "Suva",
+        "to": "Delailasakau",
+        "mode": "4WD vehicle",
+        "duration": "3 hours",
+        "details": "Mountain roads beyond the sealed highway; arranged by Think Pacific. Not accessible by public bus.",
+        "cost": "Included in programme"
+      }
+    ],
+    "mapCenter": [
+      -17.7134,
+      178.0650
+    ],
+    "mapZoom": 8,
+    "imageCount": 11,
+    "imagePrefix": "fiji/fiji",
+    "bestSeason": "summer",
+    "difficulty": "moderate",
+    "budgetLevel": "budget",
+    "durationDays": 21
+  },
+  {
+    "id": "croatia",
+    "title": "Solo Trip Along the Adriatic Coast",
+    "country": "Croatia",
+    "route": "Split → Makarska → Dubrovnik",
+    "dates": {
+      "start": "2024-04-01",
+      "end": "2024-04-10"
+    },
+    "tags": [
+      "history",
+      "local-food",
+      "hiking",
+      "culture"
+    ],
+    "description": "In April 2024, I embarked on a solo journey along Croatia's sun-drenched Adriatic coast.\n\nMy adventure began in Split, where I wandered through the remarkably well-preserved Roman ruins of Diocletian's Palace. From there, I followed the shoreline south to the picturesque town of Makarska. Its pebble beaches and fragrant pine forests were a perfect midday respite before finally arriving in Dubrovnik. There the ancient Roman architecture, soaring columns, graceful arches, and massive city walls still stand intact, transporting you back to a time where emperors and merchants once walked these streets.",
+    "stops": [
+      {
+        "name": "Split",
+        "coords": [
+          43.51,
+          16.44
+        ],
+        "highlights": [
+          "Diocletian's Palace",
+          "Roman ruins"
+        ],
+        "description": "Croatia's second-largest city, built in and around the ruins of Roman Emperor Diocletian's retirement palace. A UNESCO World Heritage Site where everyday life unfolds within ancient walls.",
+        "activities": [
+          {
+            "name": "Diocletian's Palace",
+            "type": "history",
+            "duration": "3 hours",
+            "description": "Wander through the 1,700-year-old palace complex — still inhabited today with cafés, shops, and apartments inside its walls."
+          },
+          {
+            "name": "Climb the Bell Tower",
+            "type": "culture",
+            "duration": "1 hour",
+            "description": "Ascend the Cathedral of Saint Domnius bell tower for panoramic views over the red rooftops and harbour."
+          },
+          {
+            "name": "Riva Promenade",
+            "type": "culture",
+            "duration": "1 hour",
+            "description": "Stroll the palm-lined waterfront with a coffee and watch the ferries come and go."
+          },
+          {
+            "name": "Green Market",
+            "type": "local-food",
+            "duration": "1 hour",
+            "description": "Sample local cheeses, figs, and Dalmatian pršut (cured ham) at the open-air market."
+          },
+          {
+            "name": "Marjan Hill hike",
+            "type": "hiking",
+            "duration": "2 hours",
+            "description": "A forested peninsula with trails leading to viewpoints, ancient chapels, and quiet beaches."
+          }
+        ],
+        "suggestedDays": 3
+      },
+      {
+        "name": "Makarska",
+        "coords": [
+          43.29,
+          17.02
+        ],
+        "highlights": [
+          "Pebble beaches",
+          "Pine forests"
+        ],
+        "description": "A charming coastal town nestled between the dramatic peaks of Mount Biokovo and the turquoise Adriatic. Famous for its long pebble beaches and pine-shaded promenades.",
+        "activities": [
+          {
+            "name": "Nugal Beach hike",
+            "type": "hiking",
+            "duration": "3 hours",
+            "description": "A rocky coastal trail through pine forest leading to a secluded cove beneath towering cliffs."
+          },
+          {
+            "name": "Biokovo Skywalk",
+            "type": "outdoor",
+            "duration": "Half day",
+            "description": "Drive up to the Biokovo Nature Park and walk the glass-bottomed skywalk 1,228m above the sea with jaw-dropping views."
+          },
+          {
+            "name": "Seafood along the Riva",
+            "type": "local-food",
+            "duration": "2 hours",
+            "description": "Feast on grilled branzino, octopus salad, and local wine at the harbourfront restaurants."
+          }
+        ],
+        "suggestedDays": 2
+      },
+      {
+        "name": "Dubrovnik",
+        "coords": [
+          42.65,
+          18.09
+        ],
+        "highlights": [
+          "City walls",
+          "Roman architecture",
+          "Old Town"
+        ],
+        "description": "The 'Pearl of the Adriatic' — a stunning medieval walled city perched on the Dalmatian coast. Its limestone streets, baroque churches, and massive fortifications have earned it UNESCO World Heritage status.",
+        "activities": [
+          {
+            "name": "Walk the City Walls",
+            "type": "history",
+            "duration": "2 hours",
+            "description": "Circle the entire Old Town on the 2km wall walk with sweeping views over terracotta rooftops and the shimmering Adriatic."
+          },
+          {
+            "name": "Stradun & Old Town",
+            "type": "culture",
+            "duration": "3 hours",
+            "description": "Explore the polished limestone main street, Rector's Palace, and the Franciscan Monastery with Europe's 3rd-oldest pharmacy."
+          },
+          {
+            "name": "Kayak to Lokrum Island",
+            "type": "outdoor",
+            "duration": "Half day",
+            "description": "Sea-kayak along the city walls, then explore the botanical gardens and peacock-roamed ruins of Lokrum."
+          },
+          {
+            "name": "Konoba dining",
+            "type": "local-food",
+            "duration": "2 hours",
+            "description": "Dine at a traditional konoba for black risotto, peka (slow-cooked meat/veg under a bell lid), and local Plavac Mali wine."
+          },
+          {
+            "name": "Mount Srđ cable car",
+            "type": "outdoor",
+            "duration": "1.5 hours",
+            "description": "Ride the cable car 405m above the city for sunset views over the Old Town, islands, and open sea."
+          }
+        ],
+        "suggestedDays": 4
+      }
+    ],
+    "transit": [
+      {
+        "from": "Split",
+        "to": "Makarska",
+        "mode": "Bus",
+        "duration": "1.5 hours",
+        "details": "Frequent Promet Makarska buses from Split bus station; scenic coastal road. Alternatively hire a car.",
+        "cost": "~€8–12"
+      },
+      {
+        "from": "Makarska",
+        "to": "Dubrovnik",
+        "mode": "Bus",
+        "duration": "3.5 hours",
+        "details": "FlixBus or Croatia Bus along the coastal D8 highway; crosses into Bosnia briefly at Neum. Show passport.",
+        "cost": "~€12–18"
+      }
+    ],
+    "mapCenter": [
+      43.5,
+      15.2
+    ],
+    "mapZoom": 6,
+    "imageCount": 8,
+    "imagePrefix": "croatia/croatia",
+    "bestSeason": "spring",
+    "difficulty": "easy",
+    "budgetLevel": "moderate",
+    "durationDays": 10
+  },
+  {
+    "id": "malaysia",
+    "title": "Road Trip with Ying",
+    "country": "Malaysia",
+    "route": "Kuala Lumpur → Penang",
+    "dates": {
+      "start": "2024-12-20",
+      "end": "2024-12-27"
+    },
+    "tags": [
+      "local-food",
+      "culture",
+      "history"
+    ],
+    "description": "At Christmas 2024, I made a stop at Malaysia on my way back to China and went on a week-long road trip with my friend Ying. A Kuala Lumpur local, Ying picked me up from the airport and together we drove north from KL to Penang.\n\nMalaysian cuisine was an absolute highlight. From fiery laksa to silky pandan desserts, classic Chinese dishes are given new life by fragrant local herbs and spices. In Penang, the island's architecture told its own story. Stately British colonial mansions, colorful Chinese shophouses draped in bougainvillea, and graceful Malay mosques all stand side by side, a beautiful testament to the city's multicultural heritage.",
+    "stops": [
+      {
+        "name": "Kuala Lumpur",
+        "coords": [
+          3.14,
+          101.69
+        ],
+        "highlights": [
+          "Local cuisine",
+          "Petronas Towers"
+        ],
+        "description": "Malaysia's bustling capital, a melting pot of Malay, Chinese, and Indian cultures. Iconic skyscrapers rise above colourful street markets and ornate temples.",
+        "activities": [
+          {
+            "name": "Petronas Twin Towers",
+            "type": "culture",
+            "duration": "2 hours",
+            "description": "Visit the 88-storey towers and the Skybridge connecting them 170m above the ground."
+          },
+          {
+            "name": "Batu Caves",
+            "type": "history",
+            "duration": "3 hours",
+            "description": "Climb 272 rainbow-painted steps to the Hindu temple cave with its towering Lord Murugan statue."
+          },
+          {
+            "name": "Jalan Alor food street",
+            "type": "local-food",
+            "duration": "2 hours",
+            "description": "Feast on char kway teow, satay, durian, and rojak at KL's most famous hawker street."
+          },
+          {
+            "name": "Central Market",
+            "type": "culture",
+            "duration": "1.5 hours",
+            "description": "An art-deco heritage building housing handicrafts, batik textiles, and local souvenirs."
+          }
+        ],
+        "suggestedDays": 3
+      },
+      {
+        "name": "Penang",
+        "coords": [
+          5.41,
+          100.34
+        ],
+        "highlights": [
+          "Colonial architecture",
+          "Street food",
+          "Multicultural heritage"
+        ],
+        "description": "The 'Pearl of the Orient' — Penang's capital George Town is a UNESCO World Heritage city renowned for its colonial shophouses, vibrant street art, and what many call the best street food in Asia.",
+        "activities": [
+          {
+            "name": "George Town street art walk",
+            "type": "culture",
+            "duration": "3 hours",
+            "description": "Follow the trail of murals and iron-rod caricatures through the heritage quarter's atmospheric lanes."
+          },
+          {
+            "name": "Penang Hill funicular",
+            "type": "outdoor",
+            "duration": "3 hours",
+            "description": "Ride the century-old funicular railway to the summit for panoramic views and cooler mountain air."
+          },
+          {
+            "name": "Gurney Drive hawker centre",
+            "type": "local-food",
+            "duration": "2 hours",
+            "description": "Sample Penang laksa, char kway teow, cendol, and pasembur at the island's most famous food court."
+          },
+          {
+            "name": "Kek Lok Si Temple",
+            "type": "history",
+            "duration": "2 hours",
+            "description": "Southeast Asia's largest Buddhist temple complex, with a striking pagoda blending Chinese, Thai, and Burmese styles."
+          },
+          {
+            "name": "Clan Jetties",
+            "type": "culture",
+            "duration": "1 hour",
+            "description": "Walk through the stilted waterfront villages built by Chinese immigrants over 100 years ago."
+          }
+        ],
+        "suggestedDays": 4
+      }
+    ],
+    "transit": [
+      {
+        "from": "Kuala Lumpur",
+        "to": "Penang",
+        "mode": "Car / Bus / Train",
+        "duration": "4–5 hours (car), 5 hours (bus/train)",
+        "details": "Drive via North-South Expressway, or take an ETS train from KL Sentral to Butterworth, then ferry to the island. Buses by KKKL or Aeroline run frequently.",
+        "cost": "~RM35–60 (bus), RM59–79 (train)"
+      }
+    ],
+    "mapCenter": [
+      4.2,
+      101.97
+    ],
+    "mapZoom": 5,
+    "imageCount": 7,
+    "imagePrefix": "malaysia/malaysia",
+    "bestSeason": "winter",
+    "difficulty": "easy",
+    "budgetLevel": "budget",
+    "durationDays": 7
+  },
+  {
+    "id": "norway_tromso",
+    "title": "Northern Light Hunting in Tromsø",
+    "country": "Norway",
+    "route": "Tromsø",
+    "dates": {
+      "start": "2023-12-20",
+      "end": "2023-12-25"
+    },
+    "tags": [
+      "outdoor",
+      "culture"
+    ],
+    "description": "At Christmas 2023, I traveled to Tromsø for my first ever northern light hunt. Stepping into the Arctic Circle for the very first time, the snow-blanketed landscapes and crisp, frosty air did not disappoint.\n\nOver five days, I chased the aurora each night, but low solar activity kept the sky clear of dancing lights. Still, reindeer sledding in a traditional Sámi village and watching orcas glide through the icy Arctic Ocean were experiences I'll never forget.",
+    "stops": [
+      {
+        "name": "Tromsø",
+        "coords": [
+          69.65,
+          18.96
+        ],
+        "highlights": [
+          "Northern lights",
+          "Reindeer sledding",
+          "Sámi village",
+          "Orca watching"
+        ],
+        "description": "The 'Gateway to the Arctic' — a lively university city on an island 350km north of the Arctic Circle, famous for aurora chasing, whale safaris, and midnight sun.",
+        "activities": [
+          {
+            "name": "Northern lights chase",
+            "type": "outdoor",
+            "duration": "Evening (6–8 hrs)",
+            "description": "Join a guided bus or minivan tour into the wilderness beyond city lights to hunt the aurora borealis."
+          },
+          {
+            "name": "Reindeer sledding in Sámi camp",
+            "type": "culture",
+            "duration": "4 hours",
+            "description": "Visit a Sámi reindeer camp, learn about indigenous traditions, and take a reindeer-drawn sleigh ride."
+          },
+          {
+            "name": "Whale safari",
+            "type": "outdoor",
+            "duration": "6 hours",
+            "description": "Sail into the fjords to spot orcas and humpback whales feeding on herring in the cold Arctic waters."
+          },
+          {
+            "name": "Arctic Cathedral visit",
+            "type": "culture",
+            "duration": "1 hour",
+            "description": "Admire the iconic 1965 triangular church with its enormous stained-glass window facing the Arctic."
+          },
+          {
+            "name": "Fjellheisen cable car",
+            "type": "outdoor",
+            "duration": "2 hours",
+            "description": "Ride 421m up Storsteinen mountain for sweeping views over the island, fjords, and surrounding peaks."
+          }
+        ],
+        "suggestedDays": 5
+      }
+    ],
+    "transit": [],
+    "mapCenter": [
+      69.65,
+      18.96
+    ],
+    "mapZoom": 3,
+    "imageCount": 6,
+    "imagePrefix": "norway_tromso/norway_tromso",
+    "bestSeason": "winter",
+    "difficulty": "easy",
+    "budgetLevel": "high",
+    "durationDays": 5
+  },
+  {
+    "id": "austria_ehrwald",
+    "title": "Spring Hiking with Lucas",
+    "country": "Austria",
+    "route": "Munich → Garmisch-Partenkirchen → Ehrwald",
+    "dates": {
+      "start": "2025-05-10",
+      "end": "2025-05-17"
+    },
+    "tags": [
+      "hiking",
+      "outdoor",
+      "culture"
+    ],
+    "description": "My friend Lucas and I embarked on a spring hiking adventure to Ehrwald, Austria this May. We flew from London to Munich, then caught the FlixBus through Garmisch-Partenkirchen before winding our way up to the village at the foot of the towering Zugspitze.\n\nNestled in the Tirol region, Ehrwald is a picture-perfect Alpine village famous for its emerald-green lakes, meadows dotted with wildflowers, and panoramic mountain vistas. It serves as one of the main gateways to the Wetterstein range, home to Austria's highest peak and offers everything from gentle valley walks to challenging via ferrata routes.",
+    "stops": [
+      {
+        "name": "Munich",
+        "coords": [
+          48.1351,
+          11.5820
+        ],
+        "highlights": [
+          "FlixBus departure"
+        ],
+        "description": "Bavaria's capital — a lively city of beer gardens, baroque palaces, and world-class museums. A common starting point for Alpine adventures.",
+        "activities": [
+          {
+            "name": "Marienplatz & Glockenspiel",
+            "type": "culture",
+            "duration": "1 hour",
+            "description": "Watch the famous carillon in the Neues Rathaus chime at 11am, then explore the surrounding old town."
+          },
+          {
+            "name": "Englischer Garten",
+            "type": "outdoor",
+            "duration": "2 hours",
+            "description": "Stroll through one of the world's largest urban parks and watch surfers ride the Eisbach wave."
+          },
+          {
+            "name": "Bavarian beer hall evening",
+            "type": "local-food",
+            "duration": "3 hours",
+            "description": "Experience Hofbräuhaus or Augustiner-Keller for pretzels, pork knuckle, and a Maß of Bavarian lager."
+          }
+        ],
+        "suggestedDays": 1
+      },
+      {
+        "name": "Garmisch-Partenkirchen",
+        "coords": [
+          47.4918,
+          11.0950
+        ],
+        "highlights": [
+          "Alpine gateway"
+        ],
+        "description": "A twin resort town at the base of Germany's highest peak, the Zugspitze. Famous for Lüftlmalerei (painted building facades) and Olympic-class skiing.",
+        "activities": [
+          {
+            "name": "Partnachklamm Gorge",
+            "type": "hiking",
+            "duration": "2 hours",
+            "description": "Walk through a dramatic limestone gorge with waterfalls crashing through narrow rock walls."
+          },
+          {
+            "name": "Zugspitze summit (German side)",
+            "type": "outdoor",
+            "duration": "Half day",
+            "description": "Take the Bayerische Zugspitzbahn cog railway or cable car to 2,962m for views into four countries."
+          },
+          {
+            "name": "Old Town walk",
+            "type": "culture",
+            "duration": "1 hour",
+            "description": "Wander the frescoed facades of the Partenkirchen half, then sample Bavarian pastry at a local Konditorei."
+          }
+        ],
+        "suggestedDays": 2
+      },
+      {
+        "name": "Ehrwald",
+        "coords": [
+          47.4069,
+          10.9994
+        ],
+        "highlights": [
+          "Zugspitze",
+          "Alpine meadows",
+          "Via ferrata",
+          "Emerald lakes"
+        ],
+        "description": "A peaceful Tirolean village at 994m elevation, serving as the Austrian gateway to the Zugspitze via the Tiroler Zugspitzbahn cable car. Surrounded by wildflower meadows, emerald lakes, and dramatic mountain ridges.",
+        "activities": [
+          {
+            "name": "Seebensee & Coburger Hütte hike",
+            "type": "hiking",
+            "duration": "5–6 hours",
+            "description": "One of Tirol's most scenic day hikes — climb past the turquoise Seebensee to the alpine hut at 1,920m with Zugspitze views."
+          },
+          {
+            "name": "Ehrwalder Alm meadow walk",
+            "type": "outdoor",
+            "duration": "3 hours",
+            "description": "Ride the gondola to 1,500m, then stroll gentle meadow trails with wildflowers and mountain panoramas."
+          },
+          {
+            "name": "Blindsee lake loop",
+            "type": "hiking",
+            "duration": "3 hours",
+            "description": "A moderate trail to a stunning emerald-green alpine lake reflecting surrounding peaks."
+          },
+          {
+            "name": "Tiroler Zugspitzbahn",
+            "type": "outdoor",
+            "duration": "2 hours",
+            "description": "Take the Austrian cable car to the Zugspitze summit at 2,962m for 360° Alpine views."
+          },
+          {
+            "name": "Tirolean dinner",
+            "type": "local-food",
+            "duration": "2 hours",
+            "description": "Enjoy Tiroler Gröstl, Kaspressknödel, and strudel at a traditional Gasthaus in the village."
+          }
+        ],
+        "suggestedDays": 4
+      }
+    ],
+    "transit": [
+      {
+        "from": "Munich",
+        "to": "Garmisch-Partenkirchen",
+        "mode": "FlixBus / Regional Train",
+        "duration": "1.5 hours",
+        "details": "FlixBus from Munich ZOB, or DB regional trains from München Hbf (Bayern-Ticket valid). Runs hourly.",
+        "cost": "~€10–20 (bus), €25 (train, or €29 Bayern-Ticket for groups)"
+      },
+      {
+        "from": "Garmisch-Partenkirchen",
+        "to": "Ehrwald",
+        "mode": "Zugspitzbahn train / Bus",
+        "duration": "25 minutes",
+        "details": "The DB Zugspitzbahn cog railway stops at Ehrwald village on its way to the summit. Alternatively, local bus 1 runs frequently.",
+        "cost": "~€5–8"
+      }
+    ],
+    "mapCenter": [
+      47.8,
+      11.3
+    ],
+    "mapZoom": 7,
+    "imageCount": 4,
+    "imagePrefix": "austria/austria",
+    "bestSeason": "spring",
+    "difficulty": "hard",
+    "budgetLevel": "moderate",
+    "durationDays": 7
+  },
+  {
+    "id": "sicily",
+    "title": "Sicilian Easter Getaway",
+    "country": "Italy",
+    "route": "Alcamo → Palermo",
+    "dates": {
+      "start": "2025-03-25",
+      "end": "2025-04-03"
+    },
+    "tags": [
+      "history",
+      "local-food",
+      "culture"
+    ],
+    "description": "In early spring 2025, I explored western Sicily with a 9-day trip from the hilltop town of Alcamo down to the bustling capital of Palermo. After touching down at Palermo Airport, I rented a compact car and headed inland through almond orchards and olive groves to Alcamo's medieval center.\n\nAlcamo charmed me with its centuries-old churches and panoramic views over the Gulf of Castellammare. After 4 days in Alcamo, I retraced the winding roads back toward the coast and spent the afternoon soaking up Palermo's vibrant markets, baroque piazzas, and sumptuous Sicilian street food.",
+    "stops": [
+      {
+        "name": "Alcamo",
+        "coords": [
+          37.97778,
+          12.96389
+        ],
+        "highlights": [
+          "Medieval churches",
+          "Gulf views",
+          "Olive groves"
+        ],
+        "description": "A hilltop town in western Sicily overlooking the Gulf of Castellammare, surrounded by vineyards and olive groves. Known for its Bianco d'Alcamo DOC white wine and well-preserved medieval churches.",
+        "activities": [
+          {
+            "name": "Castello dei Conti di Modica",
+            "type": "history",
+            "duration": "1.5 hours",
+            "description": "Explore the 14th-century hilltop castle with views over the town and surrounding countryside."
+          },
+          {
+            "name": "Chiesa Madre di Alcamo",
+            "type": "history",
+            "duration": "1 hour",
+            "description": "Visit the ornate main cathedral with its baroque interior frescoes and marble columns."
+          },
+          {
+            "name": "Wine tasting",
+            "type": "local-food",
+            "duration": "3 hours",
+            "description": "Tour a local vineyard and sample Bianco d'Alcamo and Nero d'Avola wines with Sicilian antipasti."
+          },
+          {
+            "name": "Riserva dello Zingaro hike",
+            "type": "hiking",
+            "duration": "Full day",
+            "description": "Day trip to Sicily's first nature reserve — a coastal trail with hidden coves, turquoise water, and wildflowers."
+          }
+        ],
+        "suggestedDays": 4
+      },
+      {
+        "name": "Palermo",
+        "coords": [
+          38.1157,
+          13.3615
+        ],
+        "highlights": [
+          "Markets",
+          "Baroque piazzas",
+          "Street food"
+        ],
+        "description": "Sicily's vibrant, chaotic capital — a city of Norman-Arab-Byzantine architecture, boisterous open-air markets, and some of the best street food in the Mediterranean.",
+        "activities": [
+          {
+            "name": "Ballarò & Vucciria markets",
+            "type": "culture",
+            "duration": "2 hours",
+            "description": "Wander the ancient open-air markets overflowing with seafood, ricotta, spices, and shouting vendors."
+          },
+          {
+            "name": "Street food tour",
+            "type": "local-food",
+            "duration": "3 hours",
+            "description": "Try arancine, panelle, sfincione, and the infamous pane con la milza (spleen sandwich) from market stalls."
+          },
+          {
+            "name": "Palazzo Reale & Cappella Palatina",
+            "type": "history",
+            "duration": "2 hours",
+            "description": "Marvel at the Norman palace and its breathtaking 12th-century chapel covered in Byzantine gold mosaics."
+          },
+          {
+            "name": "Quattro Canti & Piazza Pretoria",
+            "type": "culture",
+            "duration": "1 hour",
+            "description": "Admire the baroque crossroads and the Renaissance 'Fountain of Shame' in the neighbouring piazza."
+          },
+          {
+            "name": "Mondello Beach",
+            "type": "outdoor",
+            "duration": "Half day",
+            "description": "Escape to Palermo's sandy beach cove framed by Monte Pellegrino, just 20 minutes from the city centre."
+          }
+        ],
+        "suggestedDays": 4
+      }
+    ],
+    "transit": [
+      {
+        "from": "Alcamo",
+        "to": "Palermo",
+        "mode": "Car / Train",
+        "duration": "50 min (car), 1.5 hours (train)",
+        "details": "Drive via the A29 motorway. Alternatively, Trenitalia regional trains run from Alcamo Diramazione station to Palermo Centrale.",
+        "cost": "~€6–8 (train)"
+      }
+    ],
+    "mapCenter": [
+      38.10,
+      13.10
+    ],
+    "mapZoom": 10,
+    "imageCount": 7,
+    "imagePrefix": "sicily/sicily",
+    "bestSeason": "spring",
+    "difficulty": "easy",
+    "budgetLevel": "moderate",
+    "durationDays": 9
+  },
+  {
+    "id": "edinburgh",
+    "title": "Summer Stroll with Tauch",
+    "country": "Scotland",
+    "route": "Edinburgh",
+    "dates": {
+      "start": "2024-08-10",
+      "end": "2024-08-13"
+    },
+    "tags": [
+      "hiking",
+      "history",
+      "local-food",
+      "culture"
+    ],
+    "description": "In August 2024, my friend Tauch and I spent a long weekend exploring the historic streets of Edinburgh. We wandered through the cobbled lanes of the Old Town, sampled haggis at a local pub, and soaked up the city's vibrant festival atmosphere.\n\nThe highlight, however, was our climb to the summit of Arthur's Seat. This ancient volcanic crag, rising above Holyrood Park, rewarded us with panoramic views over the castle, the Firth of Forth, and the rolling Lothian countryside beyond.",
+    "stops": [
+      {
+        "name": "Edinburgh",
+        "coords": [
+          55.9533,
+          -3.1883
+        ],
+        "highlights": [
+          "Old Town",
+          "Festival atmosphere",
+          "Local pubs"
+        ],
+        "description": "Scotland's historic capital, a city of medieval closes, Georgian elegance, and a dramatic hilltop castle. Home to the world's largest arts festival every August.",
+        "activities": [
+          {
+            "name": "Edinburgh Castle",
+            "type": "history",
+            "duration": "2 hours",
+            "description": "Explore Scotland's most iconic fortress, perched on Castle Rock with views over the entire city."
+          },
+          {
+            "name": "Royal Mile walk",
+            "type": "culture",
+            "duration": "2 hours",
+            "description": "Walk the cobbled spine of the Old Town from the castle down to the Palace of Holyroodhouse."
+          },
+          {
+            "name": "Fringe Festival shows",
+            "type": "culture",
+            "duration": "Evening",
+            "description": "Catch comedy, theatre, and street performances at the world's largest arts festival (August only)."
+          },
+          {
+            "name": "Haggis & whisky tasting",
+            "type": "local-food",
+            "duration": "2 hours",
+            "description": "Sample traditional haggis, neeps and tatties paired with single malt Scotch at a historic pub."
+          }
+        ],
+        "suggestedDays": 2
+      },
+      {
+        "name": "Arthur's Seat",
+        "coords": [
+          55.9444,
+          -3.1616
+        ],
+        "highlights": [
+          "Volcanic summit",
+          "Panoramic views",
+          "Holyrood Park"
+        ],
+        "description": "An ancient volcanic peak rising 251m in the heart of Edinburgh's Holyrood Park. One of the most rewarding urban hikes in Europe.",
+        "activities": [
+          {
+            "name": "Summit hike",
+            "type": "hiking",
+            "duration": "2 hours",
+            "description": "Climb to the 251m summit for 360° panoramic views over Edinburgh, the Firth of Forth, and the Pentland Hills."
+          },
+          {
+            "name": "Salisbury Crags trail",
+            "type": "hiking",
+            "duration": "1 hour",
+            "description": "Walk along the dramatic cliff face of the Salisbury Crags for views without the full summit climb."
+          },
+          {
+            "name": "St Margaret's Loch",
+            "type": "outdoor",
+            "duration": "30 min",
+            "description": "Visit the peaceful loch at the base of the crags, home to swans and the ruins of St Anthony's Chapel."
+          }
+        ],
+        "suggestedDays": 1
+      }
+    ],
+    "transit": [
+      {
+        "from": "Edinburgh",
+        "to": "Arthur's Seat",
+        "mode": "Walk",
+        "duration": "20 minutes",
+        "details": "Walk from the Royal Mile through Holyrood Park gates. The trailhead is beside the Palace of Holyroodhouse.",
+        "cost": "Free"
+      }
+    ],
+    "mapCenter": [
+      55.9533,
+      -3.1883
+    ],
+    "mapZoom": 11,
+    "imageCount": 6,
+    "imagePrefix": "edinburgh/edinburgh",
+    "bestSeason": "summer",
+    "difficulty": "moderate",
+    "budgetLevel": "moderate",
+    "durationDays": 3
+  }
+]

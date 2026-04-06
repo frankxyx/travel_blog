@@ -1,144 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Frank's travel blog, featuring adventures in Fiji, Malaysia, and Croatia ...">
-    <title>Frank - Travel Blog</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plan your personalized travel itinerary — curated trips for hiking, outdoor adventures, local culture, history, and authentic food experiences." />
+  <title>Wanderlust — Personalized Travel Itineraries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
-    <nav>
-        <a href="#me">About Me</a>
-        <a href="#travels">Travels</a>
-        <a href="#projects">Projects</a>
-        <a href="#sports">Sports</a>
-    </nav>
-
-    <main>
-        <h2 id="me">About Me</h2>
-        <img class="profile-image" src="profileimage.jpg" alt="Frank Mayfield Profile Picture 2">
-        <p>Hi, I'm Frank Mayfield(Yuxuan Xiang), I enjoy travelling to different places around the world and experiencing new cultures.
-           I study Data Science at the University of Bristol (2023-2026), with my main focus on software engineering and machine learning.</p>
-
-        <h2 id="travels">Travels</h2>
-        <p>Click on the locations below to find out the details of my adventures.</p>
-
-        <!-- Map container -->
-        <div id="map" style="height: 500px; width: 80%;"></div>
-
-        <!-- Image container -->
-        <div class="image-container" id="imageContainer"></div>
-
-        <script>
-        // 1. Initialize world‐view map
-        var map = L.map('map').setView([20, 0], 1);
-
-        // 2. Add OpenStreetMap tiles
-        L.tileLayer('https://tile.jawg.io/jawg-terrain/{z}/{x}/{y}{r}.png?access-token=W1YwtxFx5TCcI6yQS3bcPBwRjEIMIgSLZyBc7K8qcsfsv9Xv2O4o4ffG914F63tL', 
-        {
-            attribution: 
-              'Tiles courtesy of <a href="https://www.jawg.io/" target="_blank">Jawg</a> ' +
-              '– &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-            minZoom: 0, 
-            maxZoom: 18
-        }
-    ).addTo(map);
-
-        map.whenReady(function() {
-            map.panBy([0, 30]);
-        });
-
-        // 3. Define your five locations
-        var locations = [
-        {
-            name: 'Fiji',
-            coords: [-17.7134, 178.0650],
-            url: 'destinations/fiji.html'
-        },
-        {
-            name: 'Croatia',
-            coords: [45.8150, 15.9819],
-            url: 'destinations/croatia.html'
-        },
-        {
-            name: 'Malaysia',
-            coords: [3.1390, 101.6869],
-            url: 'destinations/malaysia.html'
-        },
-        {
-            name: 'Tromsø, Norway',
-            coords: [69.6492, 18.9553],
-            url: 'destinations/norway_tromso.html'
-        },
-        {
-            name: 'Ehrwald, Austria',
-            coords: [47.4673, 10.9844],
-            url: 'destinations/austria_ehrwald.html'
-        },
-        {
-            name: 'Sicily, Italy',
-            coords: [38.10, 13.10],
-            url: 'destinations/sicily.html'
-        },
-        {
-            name: 'Edinburgh, Scotland',
-            coords: [55.9533, -3.1883],
-            url: 'destinations/edinburgh.html'
-        }
-        ];
-
-        // 4. Loop through and place markers + popups
-        locations.forEach(function(loc) {
-        var marker = L.marker(loc.coords).addTo(map);
-        marker.bindPopup(
-            '<strong>' + loc.name + '</strong><br>' +
-            '<a href="' + loc.url + '">Learn more</a>'
-        );
-        marker.on('click', function() {
-            window.location.href = loc.url;
-        });
-        });
-        </script>
-
-        <section id="projects">
-            <h2 id="projects">Projects</h2>
-            <div class="project-list">
-            <!-- Project 1 -->
-             <a href="projects/statistical_mechanics.html" class ="project-item">
-                <img src="assets/images/projects/statistical_mechanics.png"
-                     alt="Statistical Mechanics Project"
-                     class="project-image"
-                />
-                <div class="project-title">Statistical Mechanics</div>
-            </a>
-            </div>
-        
-            <p class="more-projects">
-            More projects can be found on <a href="https://github.com/frankxyx">Frank’s GitHub</a>.
-            </p>
-        </section>
-        
-        <section id="sports">
-            <h2 id="sports">Sports</h2>
-            <div class="sports-list">
-                <a href="./extracirricular/tennis.html" class="sports-item">
-                    <img src="assets/images/tennis/tennis1.jpg"
-                     alt="Tennis" 
-                     class="sports-image"
-                    >
-                    <div class="sports-title">Tennis</div>
-                </a>
-                </div>
-            <p>My favorite sport is tennis and I currently serve as the Advanced Team Captain in the University of Bristol Tennis Club</p>
-        </section>
-
-    </main>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
